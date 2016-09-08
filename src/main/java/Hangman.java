@@ -1,13 +1,15 @@
-
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Random;
 
 public class Hangman {
-  public String mWord;
-  public String mGuess;
+  private String mWord;
+  private ArrayList<String> mGuess;
 
 
-  public Hangman(String word, String guess) {
+  public Hangman(String word) {
     mWord = word;
-    mGuess = guess;
+    mGuess = new ArrayList<String>();
   }
 
   public int letterCheck(String answer, String guess) {
@@ -15,4 +17,13 @@ public class Hangman {
     int result = wordOne.indexOf(guess);
     return result;
   }
+
+  public String getWord() {
+    return mWord;
+  }
+
+  public ArrayList<String> getGuesses() {
+    return mGuess;
+  }
+
 }
