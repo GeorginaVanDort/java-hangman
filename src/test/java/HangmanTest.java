@@ -15,4 +15,11 @@ public class HangmanTest {
     int expected = -1;
     assertEquals(expected, testHangman.letterCheck("word", "a"));
   }
+
+  @Test
+  public void letterCheck_isLetterInWord_true() {
+    Hangman testHangman = new Hangman("word");
+    int expected = 1;
+    assertEquals(expected, testHangman.letterCheck("word", "o"));
+  }
 }
