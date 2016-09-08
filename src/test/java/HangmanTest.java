@@ -10,16 +10,23 @@ public class HangmanTest {
   }
 
   @Test
-  public void letterCheck_isLetterInWord_false() {
+  public void wordCheck_isLetterInWord_false() {
     Hangman testHangman = new Hangman("word");
-    int expected = -1;
-    assertEquals(expected, testHangman.letterCheck("word", "a"));
+    String expected = "----";
+    assertEquals(expected, testHangman.wordCheck());
   }
 
   @Test
-  public void letterCheck_isLetterInWord_true() {
+  public void wordCheck_isLetterInWord_true() {
     Hangman testHangman = new Hangman("word");
     int expected = 1;
-    assertEquals(expected, testHangman.letterCheck("word", "o"));
+    assertEquals(expected, testHangman.wordCheck());
   }
+
+  // @Test
+  // public void wordCheck_isLetterInWord_true() {
+  //   Hangman testHangman = new Hangman("word");
+  //   int expected = 1;
+  //   assertEquals(expected, testHangman.wordCheck());
+  // }
 }
