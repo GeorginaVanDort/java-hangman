@@ -1,12 +1,18 @@
+
+
 public class Hangman {
-  public int letterCheck(String guess) {
-    String wordOne = "beer";
+  public String mWord;
+  public String mGuess;
+
+
+  public Hangman(String word, String guess) {
+    mWord = word;
+    mGuess = guess;
+  }
+
+  public int letterCheck(String answer, String guess) {
+    String wordOne = answer;
     int result = wordOne.indexOf(guess);
-    // if (result > 0) {
-    //   return true;
-    // } else {
-    //   return false;
-    // }
     return result;
   }
 }

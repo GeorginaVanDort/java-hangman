@@ -3,16 +3,16 @@ import static org.junit.Assert.*;
 
 public class HangmanTest {
 
-  // @Test
-  // public void letterCheck_isLetterInWord_false() {
-  //   Hangman hangman = new Hangman();
-  //   assertEquals(false, hangman.letterCheck("a"));
-  // }
+  @Test
+  public void newHangman_instantiatesCorrectly() {
+    Hangman testHangman = new Hangman("word", "a");
+    assertEquals(true, testHangman instanceof Hangman);
+  }
 
   @Test
   public void letterCheck_isLetterInWord_false() {
-    Hangman hangman = new Hangman();
+    Hangman testHangman = new Hangman("word", "a");
     int expected = -1;
-    assertEquals(expected, hangman.letterCheck("a"));
+    assertEquals(expected, testHangman.letterCheck("word", "a"));
   }
 }
