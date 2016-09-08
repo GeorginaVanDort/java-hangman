@@ -19,7 +19,8 @@ public class HangmanTest {
   @Test
   public void wordCheck_isLetterInWord_true() {
     Hangman testHangman = new Hangman("word");
-    int expected = 1;
+    String expected = ;
+    
     assertEquals(expected, testHangman.wordCheck());
   }
 

@@ -21,7 +21,7 @@ public class Hangman {
   public String wordCheck() {
     String result = "";
     for (int i = 0; i <= mWord.length(); i++) {
-      if (mGuess.contains(mWord.charAt(i))) {
+      if (mGuess.contains(Character.toString(mWord.charAt(i)))) {
         result += mWord.charAt(i);
       } else {
         result += "-";
